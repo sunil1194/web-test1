@@ -1,0 +1,23 @@
+$black: #333333;
+$white: #fff;
+$grey:#9CA5B1;
+$theme-color:#53b1ef;
+$blue: #232360;
+.black {
+  color: $black;
+}
+.white {
+  color: $white;
+}
+.grey {
+  color: $grey;
+}
+.theme-color {
+  color: $theme-color !important;
+}
+.red {
+  color: #FF4040 !important;
+}
+.blue {
+  color: $blue;
+}

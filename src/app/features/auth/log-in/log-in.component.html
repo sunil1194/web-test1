@@ -1,0 +1,59 @@
+<div class="justify-center align-center vh-100">
+  <div class="w-50 bg p-4">
+    <div class="font-38 fw-7 text-center">Login</div>
+    <div class="pt-4 text-center grey fw-5">
+      Login description here...
+    </div>
+    <div class="pt-4">
+      <form class="form" [formGroup]="form">
+        <form-field [errorControl]="form.get('email')" name="email address">
+          <label for="email" class="form-label fw-5">Email</label>
+          <input
+            type="text"
+            [placeholder]="'Email'"
+            name="email id"
+            formControlName="email"
+            class="form-control input"
+          />
+        </form-field>
+        <form-field [errorControl]="form.get('password')" name="password">
+          <label for="password" class="form-label fw-5">Password</label>
+          <input
+            type="password"
+            id="password"
+            formControlName="password"
+            name="password"
+            [placeholder]="'Password'"
+            class="form-control input"
+            #inputf
+          />
+          <div class="form-append align-center">
+            <img class="cursor" [src]="
+                showPassword
+                  ? 'assets/images/eyeOpen.svg '
+                  : 'assets/images/eyeClose.svg '
+              " (click)="
+                showPassword = !showPassword;
+                inputf.type = inputf.type == 'password' ? 'text' : 'password'
+              " />
+          </div>
+        </form-field>
+      </form>
+      <div class="text-right black font-16 fw-5 cursor">
+        <span routerLink="../forget-password">Forgot Password?</span>
+      </div>
+      <div class="text-center mt-5">
+        <button class="theme-btn theme-color" (click)="logIn()">
+          Login
+          <mat-spinner
+            class="btn-spinner"
+            *ngIf="isLoading"
+            [diameter]="16"
+            [strokeWidth]="2"
+          >
+          </mat-spinner>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

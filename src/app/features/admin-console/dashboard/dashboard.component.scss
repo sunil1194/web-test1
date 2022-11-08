@@ -1,0 +1,24 @@
+.card {
+  border-radius: 6px;
+  overflow: hidden;
+  &.card-body {
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+  }
+  &.ht {
+    min-height: 200px;
+    margin-bottom: 10px;
+  }
+}
+.bg-white {
+  background-color: #fff;
+}
+.bgGrey {
+  background-color: #f4f0ef;
+}
+:host ::ng-deep mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background-color: #53b1ef;
+}
+:host ::ng-deep mat-tab-header.mat-tab-header {
+  background: #fff;
+}
